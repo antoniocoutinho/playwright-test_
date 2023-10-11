@@ -30,7 +30,7 @@ pipeline {
     }
     post {
         always {
-
+sh "echo test3"
             }
     }
 }
