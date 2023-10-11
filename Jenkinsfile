@@ -4,8 +4,8 @@ import groovy.json.JsonOutput
 pipeline {
 
     agent {
-            node {
-                label "master"  //change this as per your agent label
+            docker {
+                image = 'node:16-alpine'
             }
         }
     environment {
