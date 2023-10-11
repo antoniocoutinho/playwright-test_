@@ -3,7 +3,11 @@ import groovy.json.JsonOutput
 
 pipeline {
 
-    
+    agent {
+            node {
+                label "master"  //change this as per your agent label
+            }
+        }
     environment {
         test="testEnv"
     }
