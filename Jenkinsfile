@@ -4,7 +4,7 @@ import groovy.json.JsonOutput
 pipeline {
 
     agent {
-            docker {image 'node:16-alpine'}
+            testa
         }
     environment {
         test="testEnv"
