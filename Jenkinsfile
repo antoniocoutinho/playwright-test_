@@ -3,9 +3,7 @@ import groovy.json.JsonOutput
 
 pipeline {
 
-    agent {
-            testa
-        }
+    agent any
     environment {
         test="testEnv"
     }
