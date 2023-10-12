@@ -2,26 +2,23 @@
 import groovy.json.JsonOutput
 
 pipeline {
-
-    agent {testa}
-    environment {
-        test="testEnv"
-    }
+    agent any
 
     stages {
-        stage("STG 1"){
+        stage('Build') {
             steps {
-                sh 'echo stg1'
+                echo 'Building..'
             }
         }
-        stage("STG 2"){
-           parallel {
-                stage('stg3') {
-                    steps {
-                        sh "echo test3"
-                    }
-                }
-             }
+        stage('Test') {
+            steps {
+                echo 'Testing..'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....'
+            }
         }
     }
 }
