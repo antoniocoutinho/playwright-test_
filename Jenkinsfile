@@ -3,13 +3,16 @@ import groovy.json.JsonOutput
 
 pipeline {
     agent { 
-                label 'testa'
+                label 'pwalias'
             }
 
     stages {
         stage('Build') {
             steps {
-                echo 'Building..'
+                sh '''
+                    echo "Multiline shell steps works too"
+                    ls -lah
+                '''
             }
         }
         stage('Test') {
